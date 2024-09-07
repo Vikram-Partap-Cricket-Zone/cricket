@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color1:#222831;
+    --color2:#35bcbf;
+}
+html{
+    height: 100vh;
+    /* background-color: rgb(22, 17, 9); */
+    background-image: linear-gradient(to left,var(--color1),var(--color1),var(--color1),var(--color2));
+    
+}
+body{
+    padding: 4px 0px 4px 4px;
+}
+main{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+#arrow{
+   
+    animation-name: flow;
+    transition: linear;
+  animation-duration: 4s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Infinite loop */
+}
+
+@keyframes flow {
+    0%{
+    transform: translateX(-30px)
+    }50%{
+        transform: translateX(0px);
+    }
+    100%{
+transform: translateX(20px)
+    }                    
+}
+
+
+#tele_logo{
+    animation-name: glow;
+    transition: linear;
+  animation-duration: 4s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Infinite loop */
+}
+@keyframes glow {
+    0%{
+    transform: scale(1);
+    }50%{
+        transform: scale(1.2);
+    }
+    100%{
+transform: scale(1);
+    }                    
+}
+
+.sover:hover{
+    transition: 1s linear;
+    transform: scale(1.2);
+}
+.gover:hover{
+    transition: 1s linear;
+    transform: scale(0.9);
+}
+#buttons{
+    cursor: pointer;
+    background-image: linear-gradient(to top, red,red,red,white);
+}
+#buttons:active{
+    transition: 1s;
+    background-image: linear-gradient(to top, black,black,black,white);
+}
+.text_white{
+    color: white;
+}
