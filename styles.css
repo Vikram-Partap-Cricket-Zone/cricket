@@ -1,78 +1,134 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
 }
 :root{
-    --color1:#222831;
-    --color2:#35bcbf;
+    --color1:#35bcbf;
+    --color2:#222831;
+    --color3:white;
+    --color4:rgb(149, 0, 255);
 }
-html{
+html, body{
     height: 100vh;
-    /* background-color: rgb(22, 17, 9); */
-    background-image: linear-gradient(to left,var(--color1),var(--color1),var(--color1),var(--color2));
-    
 }
-body{
-    padding: 4px 0px 4px 4px;
-}
-main{
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-}
-#arrow{
+.main-box{
    
-    animation-name: flow;
-    transition: linear;
-  animation-duration: 4s; /* Duration of the animation */
-  animation-iteration-count: infinite; /* Infinite loop */
+    background-image: linear-gradient(to right, var(--color1),var(--color1),var(--color1), var(--color2));
+    padding:20px 10px;
 }
-
-@keyframes flow {
-    0%{
-    transform: translateX(-30px)
-    }50%{
-        transform: translateX(0px);
-    }
-    100%{
-transform: translateX(20px)
-    }                    
+.button1{
+    cursor: pointer;
+    transition: .2s;
+    padding: 12px 24px;
+    background-image: linear-gradient(to top,var(--color4),var(--color4),var(--color4),var(--color3));
 }
-
-
-#tele_logo{
-    animation-name: glow;
-    transition: linear;
-  animation-duration: 4s; /* Duration of the animation */
-  animation-iteration-count: infinite; /* Infinite loop */
-}
-@keyframes glow {
-    0%{
-    transform: scale(1);
-    }50%{
-        transform: scale(1.2);
-    }
-    100%{
-transform: scale(1);
-    }                    
-}
-
-.sover:hover{
-    transition: 1s linear;
+.button1:active{
     transform: scale(1.2);
 }
-.gover:hover{
-    transition: 1s linear;
-    transform: scale(0.9);
+.button1:hover{
+    box-shadow: 1px 0px 10px .2px white;
+
 }
-#buttons{
-    cursor: pointer;
-    background-image: linear-gradient(to top, red,red,red,white);
+.logo{
+    transition: 2s;
 }
-#buttons:active{
-    transition: 1s;
-    background-image: linear-gradient(to top, black,black,black,white);
+.logo:hover{
+    transition: 2s;
+    transform: rotateY(360deg);
 }
-.text_white{
-    color: white;
+.text-color1{
+    text-shadow: 2px 2px 4px  var(--color3);
+    color: var(--color1);
 }
+.text-color3{
+    color: var(--color3);
+}
+.text-color2{
+    color: red;
+}
+.text-color4{
+    color: var(--color4);
+}
+.name{
+    text-shadow: 2px 2px 4px var(--color3);
+    color: var(--color3);
+}
+.join-box{
+    
+   animation:join_box 2s linear infinite; 
+}
+/*footer box*/
+.footer-box{
+    height: auto;
+    background-color: var(--color1);
+    box-shadow: 1px 0px 10px .3px var(--color3);
+    padding: 10px;
+}
+
+@keyframes join_box {
+    0%{
+transform: scale(.8);
+    }
+    33%{
+
+        transform: scale(1.2);
+    }
+    66%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.8);
+    }
+}
+ .name{
+        text-align: center;
+    }
+
+
+
+
+    @media (max-width:800px) {
+       .h1{
+        font-size:larger;
+       }
+       .h2{
+font-size: large;
+       }
+       .h3{
+       font-size: medium;
+       }
+       .h4{
+font-size: small;
+       }
+       .logo{
+        width: 100px;
+        height: 100px;
+       }
+.main-box{
+    height: 95vh;
+}
+    }
+    /*for laptop screen*/
+    @media (min-width:800px) {
+        .h1{
+         font-size:xx-large;
+        }
+        .name{
+              font-size: 40px;
+        }
+        .h2{
+ font-size:x-large;
+        }
+        .h3{
+        font-size:large;
+        }
+        .h4{
+ font-size: small;
+        }
+        .logo{
+         width:130px;
+         height:130px;
+        }
+ 
+     }
